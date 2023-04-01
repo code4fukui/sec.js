@@ -18,3 +18,7 @@ const sign = sec.sign(prikey, message);
 alert("VERIFIED:" + sec.verify(sign, pubkey, message));
 </script>
 ```
+
+## dependencies
+
+- [forge-es](https://github.com/taisukef/forge-es) forked [Forge](https://github.com/digitalbazaar/forge)
