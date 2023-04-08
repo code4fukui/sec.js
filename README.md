@@ -52,7 +52,7 @@ console.log(new TextDecoder().decode(dec));
 
 ## dependencies
 
-- [forge-es](https://github.com/taisukef/forge-es) forked [Forge](https://github.com/digitalbazaar/forge)
+- [forge-es (Ed25519)](https://github.com/taisukef/forge-es) forked [Forge](https://github.com/digitalbazaar/forge)
 - [X25519](https://github.com/code4fukui/X25519/) forked [js-x25519](https://github.com/CryptoEsel/js-x25519)
 - [ed25519-to-x25519](https://github.com/code4fukui/ed25519-to-x25519/) forked [ed25519-to-x25519](https://github.com/jjavery/ed25519-to-x25519)
 - [AESGCM](https://github.com/taisukef/AES-GCM-es/)
