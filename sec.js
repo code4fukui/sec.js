@@ -5,6 +5,12 @@ import { convertPublicKey, convertSecretKey } from "https://code4fukui.github.io
 import { AESGCM } from "https://taisukef.github.io/AES-GCM-es/AESGCM.js";
 import { setbin, subbin } from "https://js.sabae.cc/binutil.js";
 
+export const prikey = () => {
+  const prikey = new Uint8Array(32);
+  crypto.getRandomValues(prikey);
+  return prikey;
+};
+
 export const pubkey = (prikey) => Ed25519.generateKeyPair({ seed: prikey }).publicKey;
 export const sign = (privateKey, message) => Ed25519.sign({ privateKey, message });
 export const verify = (signature, publicKey, message) => Ed25519.verify({ signature, publicKey, message })
