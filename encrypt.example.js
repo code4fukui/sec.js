@@ -1,11 +1,11 @@
 import * as sec from "./sec.js";
 
 const prikey1 = sec.prikey();
-const pubkey1 = new Uint8Array(await sec.pubkey(prikey1));
+const pubkey1 = await sec.pubkey(prikey1);
 console.log(pubkey1, prikey1);
 
 const prikey2 = sec.prikey();
-const pubkey2 = new Uint8Array(await sec.pubkey(prikey2));
+const pubkey2 = await sec.pubkey(prikey2);
 console.log(pubkey2, prikey2);
 
 const share1 = sec.sharekey(prikey1, pubkey2);
