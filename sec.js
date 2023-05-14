@@ -13,7 +13,14 @@ export const prikey = () => {
 
 export const pubkey = (prikey) => Ed25519.generateKeyPair({ seed: prikey }).publicKey;
 export const sign = (privateKey, message) => Ed25519.sign({ privateKey, message });
-export const verify = (signature, publicKey, message) => Ed25519.verify({ signature, publicKey, message })
+export const verify = (signature, publicKey, message) => {
+  try {
+    return Ed25519.verify({ signature, publicKey, message });
+  } catch (e) {
+    console.log(e);
+  }
+  return false;
+};
 
 export const sharekey = (prikey, pubkey) => X25519.getSharedKey(convertSecretKey(prikey), convertPublicKey(pubkey));
 
