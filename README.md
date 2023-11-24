@@ -27,12 +27,12 @@ import * as sec from "https://code4fukui.github.io/sec.js/sec.js";
 
 // ユーザー1
 const prikey1 = sec.prikey();
-const pubkey1 = await sec.pubkey(prikey1);
+const pubkey1 = sec.pubkey(prikey1);
 console.log(pubkey1, prikey1);
 
 // ユーザー2
 const prikey2 = sec.prikey();
-const pubkey2 = await sec.pubkey(prikey2);
+const pubkey2 = sec.pubkey(prikey2);
 console.log(pubkey2, prikey2);
 
 // 相手の公開鍵と自分の秘密から共通鍵を生成、一致している
